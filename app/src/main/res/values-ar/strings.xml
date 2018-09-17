@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HardTask002</string>
+    <string name="register">تسجيــل</string>
+    <string name="full_name">الإســم كامــل</string>
+    <string name="password">كلمــة الــسر</string>
+    <string name="email">البريــد الإلكترونــي</string>
+    <string name="country">البلــد</string>
+    <string name="city">المدينــة</string>
+    <string name="click_text">"بالــضغط علــى تسجيــل فــأنت تــوافق علــى "</string>
+    <string name="terms">الــشروط و الأحكــام</string>
+    <string name="code">الكــود</string>
+    <string name="change_language">تغييــر اللغــة</string>
+    <string name="etMessageError">هذا الحقل مطلوب</string>
+    <string name="coedMessageError">الكود مطلوب</string>
+    <string name="countryMessageError">البلد مطلوب</string>
+    <string name="cityMessageError">المدينة مطلوب</string>
+    <string name="noCities">لا يوجد محافظات </string>
+    <string name="loadingError">خطأ فى التحميل </string>
+    <string name="success">تم التسجيل بنجاح</string>
+
+
+</resources>

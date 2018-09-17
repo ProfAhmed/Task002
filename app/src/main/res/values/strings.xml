@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">HardTask002</string>
+    <string name="register">register</string>
+    <string name="full_name">Full Name</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="click_text">By clicking register you agree to </string>
+    <string name="terms">Terms and Conditions</string>
+    <string name="code">Code</string>
+    <string name="code_number">123456</string>
+    <string name="change_language">Change Language</string>
+    <string name="etMessageError">This field is required</string>
+    <string name="coedMessageError">Code is required</string>
+    <string name="countryMessageError">Country is required</string>
+    <string name="cityMessageError">City is required</string>
+    <string name="noCities">No Cities Found </string>
+    <string name="loadingError">Loading Error </string>
+    <string name="success">Success</string>
+
+
+</resources>

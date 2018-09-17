@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="et_padding_top">@dimen/_7sdp</dimen>
+    <dimen name="et_padding_bottom">@dimen/_10sdp</dimen>
+    <dimen name="et_padding_start">@dimen/_10sdp</dimen>
+    <dimen name="et_padding_end">@dimen/_10sdp</dimen>
+    <dimen name="text_size">@dimen/_10sdp</dimen>
+    <dimen name="layout_marginTop">@dimen/_14sdp</dimen>
+
+</resources>

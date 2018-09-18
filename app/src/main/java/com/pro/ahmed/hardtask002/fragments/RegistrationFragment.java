@@ -85,7 +85,7 @@ public class RegistrationFragment extends Fragment implements AdapterView.OnItem
     private String cityName;
     private int code;
 
-    private boolean isSpinnerInitial = false; // check if this first time to prevent Listener work auto
+    private boolean isSpinnerTouched = false; // check if this first time to prevent Listener work auto
     private static boolean isFragmentBack = false; // check if back to first fragment to prevent Listener work auto
 
     private boolean checkSelectedCountry = false; // check if country is selected
@@ -417,7 +417,7 @@ public class RegistrationFragment extends Fragment implements AdapterView.OnItem
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-        if (isSpinnerInitial && isFragmentBack) {
+        if (isSpinnerTouched && isFragmentBack) {
 
             String item = parent.getItemAtPosition(position).toString();
 
@@ -460,7 +460,7 @@ public class RegistrationFragment extends Fragment implements AdapterView.OnItem
 
     @Override
     public boolean onTouch(View v, MotionEvent event) {
-        isSpinnerInitial = true;
+        isSpinnerTouched = true;
         isFragmentBack = true;
         return false;
     }

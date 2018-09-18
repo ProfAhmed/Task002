@@ -1,43 +1,50 @@
-package com.pro.ahmed.hardtask002;
+package com.pro.ahmed.hardtask002.fragments;
 
 import android.graphics.Bitmap;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.KeyEvent;
+import android.support.v4.app.Fragment;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
-public class WebViewActivity extends AppCompatActivity {
-    WebView myWebView;
+import com.pro.ahmed.hardtask002.R;
+
+public class WebViewFragment extends Fragment {
+
+    private static WebView myWebView;
     private ProgressBar pb;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_web_view);
+    public static WebView getMyWebView() {
+        return myWebView;
+    }
 
-        myWebView = (WebView) findViewById(R.id.webView);
-        pb = (ProgressBar) findViewById(R.id.progressBar);
-        myWebView.setWebViewClient(new MyWebViewClient()); // to open inside App
+    public WebViewFragment() {
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_webview, container, false);
+        myWebView = (WebView) view.findViewById(R.id.webView);
+        pb = (ProgressBar) view.findViewById(R.id.progressBar);
+        myWebView.setWebViewClient(new WebViewFragment.MyWebViewClient()); // to open inside App
         myWebView.getSettings().setLoadsImagesAutomatically(true);
         myWebView.getSettings().setJavaScriptEnabled(true); // to support JavaScript
         myWebView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY); // to support ScrollBars
         myWebView.loadUrl("https://termsfeed.com/blog/sample-terms-andconditions-template/");
+        return view;
     }
 
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        // Check if the key event was the Back button and if there's history
-        if ((keyCode == KeyEvent.KEYCODE_BACK) && myWebView.canGoBack()) {
-            myWebView.goBack(); // to Navigation for back
-            return true;
-        }
-        // If it wasn't the Back key or there's no web page history, bubble up to the default
-        // system behavior (probably exit the activity)
-        return super.onKeyDown(keyCode, event);
-    }
 
     private class MyWebViewClient extends WebViewClient {
         @Override
@@ -60,4 +67,6 @@ public class WebViewActivity extends AppCompatActivity {
             pb.getIndeterminateDrawable().setColorFilter(0xFFFF0000, android.graphics.PorterDuff.Mode.MULTIPLY);
         }
     }
+
+
 }
